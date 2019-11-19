@@ -1,1 +1,1 @@
-web: gunicorn connectMeWebApi:connectmedataparser
+web: gunicorn connectMeWebApi:app
