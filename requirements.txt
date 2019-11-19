@@ -4,3 +4,4 @@ flask
 PIL
 pytesseract
 json
+pillow
