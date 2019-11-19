@@ -1,1 +1,1 @@
-web: gunicorn connectMeWebApi.py
+web: gunicorn connectMeWebApi:connectmedataparser
