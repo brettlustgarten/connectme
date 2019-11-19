@@ -1,1 +1,1 @@
-web: gunicorn connectmedataparser.wsgi --log-file -
+web: gunicorn connectme.wsgi --log-file -
