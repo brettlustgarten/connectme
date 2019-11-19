@@ -69,4 +69,3 @@ lists. From here, 4-gram frequencies were estimated with a small
 smoothing penalty.
 
 The most likely line unde this model is selected as the name.
-
