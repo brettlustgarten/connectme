@@ -1,22 +1,18 @@
 This package extracts the name, number and email from the text of
 business cards.
 
-The code is implemented for python 2.7 and requires no special dependencies.
-
 - parse.py: invokes the package to extract info from sample text filess
-- train_classifier.py: estimates the person name classifier from training data.
-- BusinessCardParser/: python package implements the solution.
 - data/: training data for name classifier and test data for business cards.
 
 How to run
 ==========
 To parse txt files containing business card output,
 
-    python parse.py -m data/name.model data/tests/*
+    python parse.py
 
 To train the name model on different data, 
 
-    python train_classifier.py -f data/name.model data/train/names.txt
+    python train_classifier.py
 
 Details
 =======
@@ -74,9 +70,3 @@ smoothing penalty.
 
 The most likely line unde this model is selected as the name.
 
-Extensions could add:
-- a discriminative classifier based on name vs. company
-- character sequence models built on a language model or recurrent neural networks
-- better training data based on real first and last name pairs
-- move code to scipy/numpy. For dependency simplicity, I did not use
-  these libraries.
