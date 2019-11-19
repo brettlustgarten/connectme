@@ -11,7 +11,7 @@ app = FlaskAPI(__name__)
 	
     # return {'request data': request.data}
 	
-@app.route('/connectmedataparser.herokuapp.com/api/connectme/new_user', methods=["GET", "POST"])
+@app.route('/api/connectme/new_user', methods=["GET", "POST"])
 def parse_user():
 	if request.method == "POST":
 		# print(request.data['photo'])
