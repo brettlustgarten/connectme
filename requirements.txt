@@ -1,1 +1,6 @@
 gunicorn==20.0.0
+flask_api
+flask
+PIL
+pytesseract
+json
