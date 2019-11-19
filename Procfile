@@ -1,1 +1,1 @@
-web: gunicorn connectme:app
+web: gunicorn connectMeWebApi.py
