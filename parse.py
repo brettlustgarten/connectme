@@ -10,7 +10,7 @@ import json
 import base64
 from io import BytesIO
 
-pytesseract.pytesseract.tesseract_cmd = r'/connectmedataparser/.apt/usr/share/tesseract-ocr/4.00/tessdata/tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'/connectmedataparser/.apt/usr/share/tesseract-ocr/4.00/tessdata'
 
 headers = {
 	'Content-type': 'application/json'
