@@ -11,7 +11,7 @@ class BusinessCardParser(object):
     email_regex = re.compile('[^@]+@[^@]+\.[^@]+')
     
     # american phone numbers
-    phone_regex = re.compile('(1)?\s?\(?(\d{3})\D{0,3}(\d{3})\D{0,3}(\d{4})')
+    phone_regex = re.compile('^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$')
 
     # basic regex to find extensions
     extension_regex = re.compile('(ext|x)\D?(\d{4})')
