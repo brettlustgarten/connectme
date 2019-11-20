@@ -27,8 +27,22 @@ def parse_user():
 			return "Error: No photo field provided."
 	else:
 		return "Hello New User!"
-    # return {'request data': request.data}
 	
+@app.route("/api/connectme/test", methods=["GET", "POST"])
+def parse_user():
+	if request.method == "POST":
+		# print(request.data['photo'])
+		if 'photo' in request.data:
+			photoData = request.data['photo']
+			# print(photoData)
+			output = parse_new_user_data(photoData)
+			# print(output)
+			return jsonify({"output":output})
+		else:
+			return "Error: No photo field provided."
+	else:
+		return "Hello New User!"
+		
 @app.route("/", methods=["GET", "POST"])
 def hello():
     return "Hello from Python!"
