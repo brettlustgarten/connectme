@@ -29,7 +29,7 @@ def parse_user():
 		return "Hello New User!"
 	
 @app.route("/api/connectme/test", methods=["GET", "POST"])
-def parse_user():
+def parse_user_test():
 	if request.method == "POST":
 		# print(request.data['photo'])
 		if 'photo' in request.data:
