@@ -10,7 +10,7 @@ import json
 import base64
 from io import BytesIO
 
-pytesseract.pytesseract.tesseract_cmd = r'/app/.apt/usr/bin/tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'/app/.apt/usr/bin/tesseract'
 
 headers = {
 	'Content-type': 'application/json'
