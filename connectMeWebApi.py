@@ -25,5 +25,9 @@ def parse_user():
 			return "Error: No photo field provided."
     # return {'request data': request.data}
 	
+@app.route("/", methods=["GET", "POST"]))
+def hello():
+    return "Hello from Python!"
+	
 if __name__ == "__main__":
     app.run(debug=True)
