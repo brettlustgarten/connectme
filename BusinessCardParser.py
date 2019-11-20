@@ -33,7 +33,8 @@ class BusinessCardParser(object):
         'f':-1,       # shorthand for fax
 		'_f':-1,
         'mobile':.25,
-		't':1
+		't':1,
+		'Mobile':.25
     }
 
     def __init__(self,model_file=None):
