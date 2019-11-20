@@ -7,8 +7,11 @@ except ImportError:
     import Image
 import pytesseract
 import json
+import base64
+from io import StringIO
+from io import BytesIO
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR\tesseract'
+pytesseract.pytesseract.tesseract_cmd = r'C:/Program Files (x86)/Tesseract-OCR/tesseract.exe'
 
 headers = {
 	'Content-type': 'application/json'
@@ -17,7 +20,8 @@ headers = {
 
 def parse_new_user_data(imageData):
 	# Simple image to string
-	output = pytesseract.image_to_string(Image.open(imageData))
+
+	output = pytesseract.image_to_string(Image.open(BytesIO(base64.b64decode(imageData))))
 
 	""" Extract name, number and email from text of business cards """
 	# Read in options

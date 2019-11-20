@@ -3,3 +3,5 @@ flask_api
 flask
 pytesseract
 pillow
+base64
+io
