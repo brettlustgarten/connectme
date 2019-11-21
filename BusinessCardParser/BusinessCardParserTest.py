@@ -142,11 +142,13 @@ class BusinessCardParser(object):
             number (str): extracted number string, None if no match found
         """
         lineSplit = line.split()
+        print(lineSplit)
         searchResults = [re.search(self.phone_regex,lineSplit[i]) for i,x in enumerate(lineSplit)]
 
         e = [searchResults[i] for i, x in enumerate(searchResults) if searchResults[i] is not None]
 
         if len(e) > 0:
+            print(e)
         # m = re.search(self.phone_regex,line)
         # if m is not None:
             # number = "".join([x for x in m.groups() if x is not None])
