@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from BusinessCardParser import BusinessCardParserTest, ContactInfo
+from BusinessCardParser import BusinessCardParser, ContactInfo
 from optparse import OptionParser
 try:
 	from PIL import Image, ImageFilter
@@ -10,7 +10,8 @@ import json
 import base64
 from io import BytesIO
 
-pytesseract.pytesseract.tesseract_cmd = r'/app/.apt/usr/bin/tesseract'
+# pytesseract.pytesseract.tesseract_cmd = r'/app/.apt/usr/bin/tesseract'
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR\tesseract'
 
 headers = {
 	'Content-type': 'application/json'
@@ -31,7 +32,7 @@ def parse_new_user_data_test(imageData):
 
 	(options, args) = opt_parser.parse_args()
 
-	parser = BusinessCardParser("data/name.model")
+	parser = BusinessCardParserTest("data/name.model")
 
 	info = parser.getContactInfo(output)
 
