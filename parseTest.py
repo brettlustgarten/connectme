@@ -31,7 +31,7 @@ def parse_new_user_data_test(imageData):
 
 	(options, args) = opt_parser.parse_args()
 
-	parser = BusinessCardParserTest("data/name.model")
+	parser = BusinessCardParser.BusinessCardParserTest("data/name.model")
 
 	info = parser.getContactInfo(output)
 
