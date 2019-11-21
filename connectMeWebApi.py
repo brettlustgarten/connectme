@@ -1,6 +1,7 @@
 from flask_api import FlaskAPI
 from flask import request, jsonify
 from parse import parse_new_user_data
+from parseTest import parse_new_user_data_test
 
 app = FlaskAPI(__name__)
 
@@ -35,7 +36,7 @@ def parse_user_test():
 		if 'photo' in request.data:
 			photoData = request.data['photo']
 			# print(photoData)
-			output = parse_new_user_data(photoData)
+			output = parse_new_user_data_test(photoData)
 			# print(output)
 			return jsonify({"output":output})
 		else:
