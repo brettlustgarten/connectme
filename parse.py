@@ -36,7 +36,7 @@ def parse_new_user_data(imageData):
 	info = parser.getContactInfo(output)
 
 	print('-' * 40)      
-	# print(output)
+	print(output)
 	print('-' * 40)
 
 	if info.getName() is None:
@@ -47,7 +47,7 @@ def parse_new_user_data(imageData):
 		print("Could not extract email")
 
 	# print("Extracted Info:")
-	print(info)
+	# print(info)
 	# print(info.getName())
 	# print(info.getPhoneNumber())
 	# print(info.getEmailAddress())

@@ -37,7 +37,7 @@ def parse_new_user_data_test(imageData):
 	info = parser.getContactInfo(output)
 
 	print('-' * 40)      
-	# print(output)
+	print(output)
 	print('-' * 40)
 
 	if info.getName() is None:
