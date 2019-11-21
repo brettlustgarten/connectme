@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from BusinessCardParserTest import BusinessCardParser, ContactInfo
+from BusinessCardParser import BusinessCardParserTest, ContactInfo
 from optparse import OptionParser
 try:
 	from PIL import Image, ImageFilter
