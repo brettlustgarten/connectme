@@ -1,6 +1,6 @@
 #!/usr/bin/python
 from BusinessCardParser import BusinessCardParser, ContactInfo
-import BusinessCardParser
+from BusinessCardParser import BusinessCardParserTest
 from optparse import OptionParser
 try:
 	from PIL import Image, ImageFilter
@@ -32,7 +32,7 @@ def parse_new_user_data_test(imageData):
 
 	(options, args) = opt_parser.parse_args()
 
-	parser = BusinessCardParser.BusinessCardParserTest("data/name.model")
+	parser = BusinessCardParserTest.BusinessCardParser("data/name.model")
 
 	info = parser.getContactInfo(output)
 

@@ -69,4 +69,8 @@ def parse_new_user_data(imageData):
 	print(new_person)
 	return(new_person)
 
-    
+def main():
+	parse_new_user_data()
+	
+if __name__ == "__main__":
+    main()
