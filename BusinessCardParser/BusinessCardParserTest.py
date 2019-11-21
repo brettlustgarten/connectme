@@ -12,6 +12,7 @@ class BusinessCardParser(object):
     
     # american phone numbers
     phone_regex = re.compile('^[+\s./0-9-\s]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$')
+    # phone_regex = re.compile(".*?(\(?\d{3})? ?[\.-]? ?\d{3} ?[\.-]? ?\d{4}\)\.*?", re.S)
 
     # basic regex to find extensions
     extension_regex = re.compile('(ext|x)\D?(\d{4})')
@@ -140,10 +141,16 @@ class BusinessCardParser(object):
         Returns:
             number (str): extracted number string, None if no match found
         """
+        lineSplit = line.split()
+        searchResults = [re.search(self.phone_regex,lineSplit[i]) for i,x in enumerate(lineSplit)]
 
-        m = re.search(self.phone_regex,line)
-        if m is not None:
-            number = "".join([x for x in m.groups() if x is not None])
+        e = [searchResults[i] for i, x in enumerate(searchResults) if searchResults[i] is not None]
+
+        if len(e) > 0:
+        # m = re.search(self.phone_regex,line)
+        # if m is not None:
+            # number = "".join([x for x in m.groups() if x is not None])
+            number = "".join([x for x in e[0].group(0) if x is not None])
 
 
             m = re.search(self.extension_regex,line)
